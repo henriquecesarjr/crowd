@@ -1,5 +1,5 @@
 function Home() {
-    return <h1>Hello World!🤩</h1>
+    return <h1>O VASCO DA GAMA É O MAIOR TIME DO UNIVERSO!🤩</h1>
 }
 
 export default Home;
