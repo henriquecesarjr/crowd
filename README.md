@@ -1,3 +1,3 @@
-# clone-tabnews
+# crowd
 
-Um projeto para treinar programação desde o começo.
+Comunidade para pessoas da área de tecnologia.
