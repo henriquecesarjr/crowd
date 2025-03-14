@@ -35,25 +35,23 @@ function DatabaseInformations() {
     refreshInterval: 2000,
   });
 
-  let databaseInformations = "Carregando...";
+  let postgresVersion = "Carregando...";
+  let maxConnections = "Carregando...";
+  let openedConnections = "Carregando...";
 
   if (!isLoading && data) {
-    databaseInformations = {
-      postgresVersion: data.dependencies.database.version,
-      maxConnections: data.dependencies.database.max_connections,
-      openedConnections: data.dependencies.database.opened_connections,
-    };
+    postgresVersion = data.dependencies.database.version;
+    maxConnections = data.dependencies.database.max_connections;
+    openedConnections = data.dependencies.database.opened_connections;
   }
 
   return (
     <>
       <h2>Database</h2>
       <hr />
-      <div>Versão do postgres: {databaseInformations.postgresVersion}</div>
-      <div>
-        Número máximo de conexões: {databaseInformations.maxConnections}
-      </div>
-      <div>Conexões abertas: {databaseInformations.openedConnections}</div>
+      <div>Versão do postgres: {postgresVersion}</div>
+      <div>Número máximo de conexões: {maxConnections}</div>
+      <div>Conexões abertas: {openedConnections}</div>
     </>
   );
 }
